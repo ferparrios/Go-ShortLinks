@@ -14,7 +14,7 @@ var linkStore = struct {
     links map[string]string
 }{links: make(map[string]string)}
 
-const baseURL = "https://fer.link/"
+const baseURL = "https://ferparedesrios.dev/"
 
 
 type LinkRequest struct {
@@ -56,7 +56,7 @@ func shortenLink(w http.ResponseWriter, r *http.Request) {
         http.Error(w, "Content-Type must be application/json", http.StatusUnsupportedMediaType)
         return
     }
-		
+
     var req LinkRequest
     err := json.NewDecoder(r.Body).Decode(&req)
     if err != nil {
